@@ -18,7 +18,7 @@ export const DarkMode = () => {
         <main>
             <section>
                 <div className='flex font-mono'>
-                    <div className='text-2xl w-1/2 my-40 mx-10'>
+                    <div className='text-2xl w-1/2 my-40 mx-20'>
                         <p>Neon is a young Filipina woman with olive skin and a short stature. She sports an athletic attire with black and blue running leggings along with a pair 
                             of sneakers. She also wears a dark-blue cropped vest that appears to act as electrical conduits for her powers. Her arms and face have light blue patterns 
                             that can illuminate with her radiant abilities. She has shoulder-length shaggy hair, colored mainly electric blue with streaks of yellow throughout and 
