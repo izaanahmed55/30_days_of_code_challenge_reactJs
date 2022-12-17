@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -36,3 +40,14 @@
     transform: rotate(360deg);
   }
 }
+
+.light-theme{
+  background-color: white;
+  color: black;
+}
+
+.dark-theme{
+  background-color: black;
+  color: white;
+}
+
