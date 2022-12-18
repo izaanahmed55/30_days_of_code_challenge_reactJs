@@ -14,16 +14,18 @@ export const IncDec = () => {
 
   return (
     <>
-      <main className='items-center justify-center'>
-        <div className=''>
-          <h3> {count} </h3>
-        </div>
-        
-        <div className='m-5 button'>
-          <button onClick={Increment}> Increment </button>
-          <button onClick={Decrement}> Decrement </button>
-        </div>
-      </main>
+      <center>
+          <main className='p-40 justify-center'>
+            <div className='p-10'>
+              <h2 className='text-white'> {count} </h2>
+            </div>
+            
+            <div className='button'>
+              <button className='mx-3' onClick={Increment}> Increment </button>
+              <button className='mx-3' onClick={Decrement}> Decrement </button>
+            </div>
+          </main>
+      </center>
     </>
   )
 }
