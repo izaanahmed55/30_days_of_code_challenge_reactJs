@@ -1,5 +1,4 @@
 
-import React, {useState} from 'react'
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Login = () => {
@@ -23,12 +22,6 @@ const Login = () => {
                 
               ) : <button onClick={() => loginWithRedirect()} type='submit'> Log In </button>
         }
-
-        {/* {
-            isAuthenticated ? <button onClick={() => loginWithRedirect()} type='submit'> Log In </button>
-            : <button onClick={() => logout({ returnTo: window.location.origin })}> Log Out </button>
-        } */}
-        
         
     </>
             
