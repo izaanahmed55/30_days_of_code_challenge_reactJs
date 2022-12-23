@@ -69,7 +69,6 @@ img {
   /* background-color: #fafaff; */
   /* padding: 2rem; */
   border-radius: 1rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,7 +97,7 @@ input {
 
 .card-error p {
   color: red;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   font-size: 1.8rem;
 }
 

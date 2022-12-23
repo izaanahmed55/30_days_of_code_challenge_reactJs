@@ -7,9 +7,7 @@ import { AppProvider } from "./components/context";
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
         <AppProvider>
-            {/* <Router> */}
                 <App />
-            {/* </Router> */}
         </AppProvider>
     </React.StrictMode>
 );
