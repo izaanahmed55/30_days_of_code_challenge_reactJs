@@ -3,16 +3,16 @@ import { NavLink } from "react-router-dom"
 import { AppContext, useGlobalContext } from './context'
 
 export const Movies = () => {
-  // const { movie } = useGlobalContext();
-
-  const [movie, setMovie] = useState(data)
+  const { movie, isLoading } = useGlobalContext();
 
   // const movie = useContext(AppContext)
-  // console.log(movie)
+//   console.log(data)
   
   return (
     <section className='movie-page'>
-      <div className='grid grid-4-col'>{ movie?.map((currentMovie) => {
+      <div className='grid grid-4-col'>{ 
+      // movie?.map((currentMovie) => {
+      data?.map((currentMovie) => {
         const { id, title, image } = currentMovie;
         return (
           <NavLink to={`movie/${id}`} key={id}>
