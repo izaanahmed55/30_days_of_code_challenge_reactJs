@@ -10,7 +10,7 @@ export const DarkMode = () => {
 
     useEffect(() => {
             document.body.className = theme;
-            console.log('useEffect')
+         //   console.log('useEffect')
         }, [theme]);
 
     return (

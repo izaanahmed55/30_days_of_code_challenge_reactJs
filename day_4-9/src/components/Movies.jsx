@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react';
 import { NavLink } from "react-router-dom"
 import { AppContext, useGlobalContext } from './context'
 
@@ -7,13 +8,16 @@ export const Movies = () => {
 
   // const movie = useContext(AppContext)
 //   console.log(data)
+
+
   
   return (
     <section className='movie-page'>
-      <div className='grid grid-4-col'>{ 
-      // movie?.map((currentMovie) => {
-      data?.map((currentMovie) => {
+      <div className='grid grid-4-col'>{
+      movie?.map((currentMovie) => {
+      // data?.map((currentMovie) => {
         const { id, title, image } = currentMovie;
+       // console.log(movie)
         return (
           <NavLink to={`movie/${id}`} key={id}>
           <div className='card'>
