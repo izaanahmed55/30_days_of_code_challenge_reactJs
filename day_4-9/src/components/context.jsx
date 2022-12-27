@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Home } from "./Home";
 
 const AppContext = React.createContext();
 const API_URL = `https://imdb-api.com/en/API/Top250Movies/${import.meta.env.VITE_API_KEY}`;
@@ -11,7 +12,7 @@ const AppProvider = ({ children }) => {
       const [click, setClick] = useState(false)
       const [error, setError] = useState(false)
 
-      const getMovies = async(url) => {
+      const getMovies = async(url, type) => {
             try{
                   fetch(url).then(res => res.json()).then((data)=>{
                         if(data.errorMessage){
@@ -20,8 +21,8 @@ const AppProvider = ({ children }) => {
                               // setError(true)
                               console.log(isError)
                         }
-                        // console.log(data)
-                        setMovie(data.results)
+                        console.log(data)
+                        type == "search" ? setMovie(data.results) : setMovie(data.items)
                       })
             } catch(error) {
                   setIsError({show: true, msg: data.Error})
@@ -29,24 +30,13 @@ const AppProvider = ({ children }) => {
       };
 
       useEffect(() => {
-            getMovies(`https://imdb-api.com/en/API/Search/k_bj22zgsx/${query}`);
+            getMovies(`https://imdb-api.com/en/API/Search/k_bj22zgsx/${query}`, "search");
             // getMovies(`${API_URL}/${query}`);
       }, [click]);
       
-      // useEffect(() => {
-      //       getMovies(API_URL);
-      // }, []);
-
-
-
-      // useEffect(() => {
-      //       // getMovies(`https://imdb-api.com/en/API/Search/k_bj22zgsx/inception 2010`);
-      //       let timerOut = setTimeout(() => {
-      //             getMovies(`${API_URL}/${query}`);
-      //       }, 3000)
-
-      //       return () => clearTimeout(timerOut)
-      // }, [query]);
+      useEffect(() => {
+            getMovies(API_URL);
+      }, []);
 
       return (
             <AppContext.Provider value={{ isLoading, isError, movie, setQuery, click, setClick }}>
