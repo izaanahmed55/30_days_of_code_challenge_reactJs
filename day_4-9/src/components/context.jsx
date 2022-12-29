@@ -31,7 +31,6 @@ const AppProvider = ({ children }) => {
 
       useEffect(() => {
             getMovies(`https://imdb-api.com/en/API/Search/k_bj22zgsx/${query}`, "search");
-            // getMovies(`${API_URL}/${query}`);
       }, [click]);
       
       useEffect(() => {

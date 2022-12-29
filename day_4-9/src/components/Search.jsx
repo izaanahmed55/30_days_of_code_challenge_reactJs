@@ -10,7 +10,6 @@ export const Search = () => {
         }  
     }
 
-
     return (
         <>
             <section className="search-section">
@@ -25,10 +24,10 @@ export const Search = () => {
                         />
                     </div>
                 </form> 
-                <div className="mt-3">
-                {query=="" && isError.show ? <span className="text-[red] "> Limit Exceeded </span> : <span></span>}
+                {/* <div className="mt-3">
+                {query!=="" && isError.show ? <span className="text-[red] "> Limit Exceeded: {isError.msg} </span> : <span></span>}
                 {console.log(isError)}
-                </div>
+                </div> */}
                 <button onClick={() => handleSearch()} className="mt-2 bg-gray-300 border rounded-xl text-[white]"> 
                 Search </button>
                 {/* <div className="card-error">
